@@ -1,19 +1,9 @@
-﻿using System.IO.Pipes;
-using ExemploExplorando.Models;
+﻿using ExemploExplorando.Models;
 
-/* Exemplo de implementação usando tuplas. */
-LeituraArquivo arquivo = new LeituraArquivo();
-var (sucesso, linhas, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+Pessoa p1 = new Pessoa("Victor", "Schlindwein");
+Console.WriteLine(p1.NomeCompleto);
 
-if (sucesso)
-{
-  // Console.WriteLine($"Identificadas {quantidadeDeLinhas} linhas");
-  foreach (string linha in linhas)
-  {
-    Console.WriteLine(linha);
-  }
-}
-else
-{
-  Console.WriteLine("Algo deu errado");
-}
+(string nome, string sobrenome) = p1;
+
+Console.WriteLine(nome);
+Console.WriteLine(sobrenome);
