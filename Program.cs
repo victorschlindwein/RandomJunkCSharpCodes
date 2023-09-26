@@ -1,9 +1,11 @@
 ﻿using ExemploExplorando.Models;
+using Newtonsoft.Json;
 
-Pessoa p1 = new Pessoa("Victor", "Schlindwein");
-Console.WriteLine(p1.NomeCompleto);
+string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
-(string nome, string sobrenome) = p1;
-
-Console.WriteLine(nome);
-Console.WriteLine(sobrenome);
+foreach (Venda venda in listaVendas)
+{
+  Console.WriteLine($"Id: {venda.Id}, produto: {venda.Produto}, preco: {venda.Preco}, Data: {venda.DataDaVenda}");
+  Thread.Sleep(500);
+}
