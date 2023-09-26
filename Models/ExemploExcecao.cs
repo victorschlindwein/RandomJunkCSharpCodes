@@ -1,4 +1,4 @@
-namespace ExemploExplorando.ExemploExcecao
+namespace ExemploExplorando.Models
 {
   public class ExemploExcecao
   {

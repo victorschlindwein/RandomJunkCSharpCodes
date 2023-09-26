@@ -1,9 +1,19 @@
-﻿using ExemploExplorando.Curso;
+﻿using System.IO.Pipes;
 using ExemploExplorando.Models;
-using ExemploExplorando.ExemploExcecao;
-using ExemploExplorando.Fila;
-using ExemploExplorando.Pilha;
-using ExemploExplorando.Dicionario;
 
-var dicionario = new Dicionario();
-dicionario.criaDicionario();
+/* Exemplo de implementação usando tuplas. */
+LeituraArquivo arquivo = new LeituraArquivo();
+var (sucesso, linhas, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+if (sucesso)
+{
+  // Console.WriteLine($"Identificadas {quantidadeDeLinhas} linhas");
+  foreach (string linha in linhas)
+  {
+    Console.WriteLine(linha);
+  }
+}
+else
+{
+  Console.WriteLine("Algo deu errado");
+}

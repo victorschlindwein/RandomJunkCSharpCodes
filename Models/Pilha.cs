@@ -1,4 +1,4 @@
-namespace ExemploExplorando.Pilha
+namespace ExemploExplorando.Models
 {
   public class Pilha
   {

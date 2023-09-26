@@ -1,6 +1,6 @@
 using ExemploExplorando.Models;
 
-namespace ExemploExplorando.Curso
+namespace ExemploExplorando.Models
 {
   public class Curso
   {

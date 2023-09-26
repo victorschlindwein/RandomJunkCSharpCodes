@@ -1,4 +1,4 @@
-namespace ExemploExplorando.Dicionario
+namespace ExemploExplorando.Models
 {
   public class Dicionario
   {
