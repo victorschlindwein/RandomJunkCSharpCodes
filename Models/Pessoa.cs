@@ -44,7 +44,7 @@ namespace ExemploExplorando.Models
       }
     }
 
-    public void Apresentar()
+    public virtual void Apresentar()
     {
       Console.WriteLine($"Nome: {NomeCompleto}, Idade: {Idade}");
     }
